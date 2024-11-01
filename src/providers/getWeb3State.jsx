@@ -20,7 +20,7 @@ export const getWeb3State = async () => {
 
     // Create a provider and signer
     const provider = new ethers.BrowserProvider(window.ethereum);
-    const signer = provider.getSigner();
+    const signer = await provider.getSigner();
 
     // Set up the contract instance with ABI and signer
     const contractAddress = "0x8b47489ECE1bD0AADDE3a15Bf692A7D7636b97A5";
